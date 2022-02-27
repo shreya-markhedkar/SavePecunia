@@ -19,3 +19,5 @@ Through the course of the hackathon, we developed and ideated a board game from 
 1) Multiplayer mode in which multiple players can compete against one another to see who comes out with the highest score.
 2) More, larger and longer game modes with higher stakes in each mode; tougher and more complicated situations where one has to do the absolute right thing to win!
 
+## Check it out!
+https://shreya-markhedkar.github.io/SavePecunia/
