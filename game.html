@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SavePecunia</title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <link rel="stylesheet" type="text/css" href="GameStyle.css" />
+      <link rel="icon" type="image/x-icon" href="/images/SP.png">
+    
+    </head>
+  
+    <body>
+
+        <!-- game board -->
+      <section class="game_board">
+    <div class="row">
+        <div class="cell square" id="square1">
+            <p class="square1-name"class="square-name"><b>1 &rarr;</b></p>
+            <p>XP = <span id="square1-xp">1</span><br>
+             Happy = <span id="square1-happy">1</span><br>
+             Money = <span id="square1-money">1</span></p>
+            <!-- <p id="square1-owner"></p>
+            <p id="square1-residents"></p> -->
+        </div>
+        <div class="cell square" id="square2">
+            <p class="square2-name"class="square-name"><b>2</b></p>
+            <p>XP = <span id="square2-xp">5</span><br>
+             Happy = <span id="square2-happy">1</span><br>
+             Money = <span id="square2-money">10</span></p>
+            <!-- <p id="square2-owner"></p>
+            <p id="square2-residents"></p> -->
+          </div>
+        <div class="cell square" id="square3">
+            <p class="square3-name"class="square-name"><b>3</b></p>
+            <p>XP = <span id="square3-xp">-5</span><br>
+             Happy = <span id="square3-happy">20</span><br>
+             Money = <span id="square3-money">-10</span></p>
+            <!-- <p id="square3-owner"></p>
+            <p id="square3-residents"></p> -->
+        </div>
+        <div class="cell square" id="square4">
+            <p class="square4-name"class="square-name"><b>4</b></p>
+            <p>XP = <span id="square4-xp">10</span><br>
+             Happy = <span id="square4-happy">0</span><br>
+             Money = <span id="square4-money">-2</span></p>
+            <!-- <p id="square4-owner"></p>
+            <p id="square4-residents"></p> -->
+        </div>
+        <div class="cell square" id="square5">
+            <p class="square5-name"class="square-name"><b>5</b></p>
+            <p>XP = <span id="square5-xp">8</span><br>
+             Happy = <span id="square5-happy">1</span><br>
+             Money = <span id="square5-money">15</span></p>
+            <!-- <p id="square5-owner"></p>
+            <p id="square5-residents"></p> -->
+        </div>
+        <div class="cell square" id="square6">
+            <p class="square6-name"class="square-name"><b>6</b></p>
+            <p>XP = <span id="square6-xp">10</span><br>
+             Happy = <span id="square6-happy">8</span><br>
+             Money = <span id="square6-money">-8</span></p>
+            <!-- <p id="square6-owner"></p>
+            <p id="square6-residents"></p> -->
+        </div>
+        <div class="cell square" id="square7">
+            <p class="square7-name"class="square-name"><b>7</b></p>
+            <p>XP = <span id="square7-xp">12</span><br>
+             Happy = <span id="square7-happy">3</span><br>
+             Money = <span id="square7-money">0</span></p>
+            <!-- <p id="square7-owner"></p>
+            <p id="square7-residents"></p> -->
+        </div>
+        <div class="cell square" id="square8">
+            <p class="square8-name"class="square-name"><b>8 &darr;</b></p>
+            <p>XP = <span id="square8-xp">6</span><br>
+             Happy = <span id="square8-happy">4</span><br>
+             Money = <span id="square8-money">6</span> </p>
+            <!-- <p id="square8-owner"></p>
+            <p id="square8-residents"></p> -->
+          </div>
+          <div class="cell info" style="width:20%;">
+          
+          </div>
+    </div>
+    <div class="row">
+        <div class="cell square" id="square16">
+            <p class="square16-name"class="square-name"><b>16 &darr;</b></p>
+            <p>XP = <span id="square16-xp">40</span><br>
+             Happy = <span id="square16-happy">-5</span><br>
+             Money = <span id="square16-money">-10</span></p>
+            <!-- <p id="square16-owner"></p>
+            <p id="square16-residents"></p> -->
+        </div>
+        <div class="cell square" id="square15">
+            <p class="square15-name"class="square-name"><b>15</b></p>
+            <p>XP = <span id="square15-xp">-6</span><br>
+             Happy = <span id="square15-happy">8</span><br>
+             Money = <span id="square15-money">-12</span></p>
+            <!-- <p id="square15-owner"></p>
+            <p id="square15-residents"></p> -->
+        </div>
+        <div class="cell square" id="square14">
+            <p class="square14-name"class="square-name"><b>14</b></p>
+            <p>XP = <span id="square14-xp">5</span><br>
+             Happy = <span id="square14-happy">2</span><br>
+             Money = <span id="square14-money">4</span></p>
+            <!-- <p id="square14-owner"></p>
+            <p id="square14-residents"></p> -->
+        </div>
+        <div class="cell square" id="square13">
+            <p class="square13-name"class="square-name"><b>13</b></p>
+            <p>XP = <span id="square13-xp">15</span><br>
+             Happy = <span id="square13-happy">-5</span><br>
+             Money = <span id="square13-money">20</span></p>
+            <!-- <p id="square13-owner"></p>
+            <p id="square13-residents"></p> -->
+        </div>
+        <div class="cell square" id="square12">
+            <p class="square12-name"class="square-name"><b>12</b></p>
+            <p>XP = <span id="square12-xp">-3</span><br>
+             Happy = <span id="square12-happy">2</span><br>
+             Money = <span id="square12-money">-5</span></p>
+            <!-- <p id="square12-owner"></p>
+            <p id="square12-residents"></p> -->
+        </div>
+        <div class="cell square" id="square11">
+            <p class="square11-name"class="square-name"><b>11</b></p>
+            <p>XP = <span id="square11-xp">5</span><br>
+             Happy = <span id="square11-happy">-1</span><br>
+             Money = <span id="square11-money">5</span></p>
+            <!-- <p id="square11-owner"></p>
+            <p id="square11-residents"></p> -->
+        </div>
+        <div class="cell square" id="square10">
+            <p class="square10-name"class="square-name"><b>10</b></p>
+            <p>XP = <span id="square10-xp">0</span><br>
+             Happy = <span id="square10-happy">0</span><br>
+             Money = <span id="square10-money">0</span></p>
+            <!-- <p id="square10-owner"></p>
+            <p id="square10-residents"></p> -->
+        </div>
+        <div class="cell square" id="square9">
+            <p class="square9-name"class="square-name"><b>&larr; 9</b></p>
+            <p>XP = <span id="square9-xp">0</span><br>
+             Happy = <span id="square9-happy">10</span><br>
+             Money = <span id="square9-money">-15</span></p>
+            <!-- <p id="square9-owner"></p>
+            <p id="square9-residents"></p> -->
+        </div>
+        <div class="cell info" style="width:20%;">
+              <!-- rolling dice -->
+        <div>
+            <img id="dieroll" src="images/arrow.png"></img>
+            <p>You rolled a <span id='dieinfo'>0</span></p>
+            <button onclick="roll()">Roll</button>
+        </div>
+      
+    <!--   rolling dice over -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell square" id="square17">
+            <p class="square17-name"class="square-name"><b>17 &rarr;</b></p>
+            <p>XP = <span id="square17-xp">6</span><br>
+             Happy = <span id="square17-happy">2</span><br>
+             Money = <span id="square17-money">16</span></p>
+            <!-- <p id="square17-owner"></p>
+            <p id="square17-residents"></p> -->
+        </div>
+        <div class="cell square" id="square18">
+            <p class="square18-name"class="square-name"><b>18</b></p>
+            <p>XP = <span id="square18-xp">-4</span><br>
+             Happy = <span id="square18-happy">11</span><br>
+             Money = <span id="square18-money">-8</span></p>
+            <!-- <p id="square18-owner"></p>
+            <p id="square18-residents"></p> -->
+          </div>
+        <div class="cell square" id="square19">
+            <p class="square19-name"class="square-name"><b>19</b></p>
+            <p>XP = <span id="square19-xp">4</span><br>
+             Happy = <span id="square19-happy">-2</span><br>
+             Money = <span id="square19-money">10</span></p>
+            <!-- <p id="square19-owner"></p>
+            <p id="square19-residents"></p> -->
+        </div>
+        <div class="cell square" id="square20">
+            <p class="square20-name"class="square-name"><b>20</b></p>
+            <p>XP = <span id="square20-xp">0</span><br>
+             Happy = <span id="square20-happy">0</span><br>
+             Money = <span id="square20-money">0</span></p>
+            <!-- <p id="square20-owner"></p>
+            <p id="square20-residents"></p> -->
+        </div>
+        <div class="cell square" id="square21">
+            <p class="square21-name"class="square-name"><b>21</b></p>
+            <p>XP = <span id="square21-xp">2</span><br>
+             Happy = <span id="square21-happy">30</span><br>
+             Money = <span id="square21-money">-20</span></p>
+            <!-- <p id="square21-owner"></p>
+            <p id="square21-residents"></p> -->
+        </div>
+        <div class="cell square" id="square22">
+            <p class="square22-name"class="square-name"><b>22</b></p>
+            <p>XP = <span id="square22-xp">24</span><br>
+             Happy = <span id="square22-happy">15</span><br>
+             Money = <span id="square22-money">20</span></p>
+            <!-- <p id="square22-owner"></p>
+            <p id="square22-residents"></p> -->
+        </div>
+        <div class="cell square" id="square23">
+            <p class="square23-name"class="square-name"><b>23</b></p>
+            <p>XP = <span id="square23-xp">26</span><br>
+             Happy = <span id="square23-happy">20</span><br>
+             Money = <span id="square23-money">40</span></p>
+            <!-- <p id="square23-owner"></p>
+            <p id="square23-residents"></p> -->
+        </div>
+        <div class="cell square" id="square24">
+            <p class="square24-name"class="square-name"><b>24 &darr;</b></p>
+            <p>XP = <span id="square24-xp">30</span><br>
+             Happy = <span id="square24-happy">15</span><br>
+             Money = <span id="square24-money">30</span></p>
+            <!-- <p id="square24-owner"></p>
+            <p id="square24-residents"></p> -->
+          </div>
+          <div class="cell info" style="width:20%;">
+            <p>Total Scores</p>
+            <p>XP: <span id="xpsum"></span></p>
+            <p>Happy: <span id="happysum"></span></p>
+            <p>Aureus money: <span id="moneysum"</span></p>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell square" id="square32">
+            <p class="square32-name"class="square-name"><b>32 &darr;</b></p>
+            <p>XP = <span id="square32-xp">10</span><br>
+             Happy = <span id="square32-happy">-3</span><br>
+             Money = <span id="square32-money">15</span></p>
+            <!-- <p id="square32-owner"></p>
+            <p id="square32-residents"></p> -->
+        </div>
+        <div class="cell square" id="square31">
+            <p class="square31-name"class="square-name"><b>31</b></p>
+            <p>XP = <span id="square31-xp">4</span><br>
+             Happy = <span id="square31-happy">20</span><br>
+             Money = <span id="square31-money">-25</span></p>
+            <!-- <p id="square31-owner"></p>
+            <p id="square31-residents"></p> -->
+        </div>
+        <div class="cell square" id="square30">
+            <p class="square30-name"class="square-name"><b>30</b></p>
+            <p>XP = <span id="square30-xp">0</span><br>
+             Happy = <span id="square30-happy">0</span><br>
+             Money = <span id="square30-money">0</span></p>
+            <!-- <p id="square30-owner"></p>
+            <p id="square30-residents"></p> -->
+        </div>
+        <div class="cell square" id="square29">
+            <p class="square29-name"class="square-name"><b>29</b></p>
+            <p>XP = <span id="square29-xp">20</span><br>
+             Happy = <span id="square29-happy">20</span><br>
+             Money = <span id="square29-money">20</span></p>
+            <!-- <p id="square29-owner"></p>
+            <p id="square29-residents"></p> -->
+        </div>
+        <div class="cell square" id="square28">
+            <p class="square28-name"class="square-name"><b>28</b></p>
+            <p>XP = <span id="square28-xp">18</span><br>
+             Happy = <span id="square28-happy">15</span><br>
+             Money = <span id="square28-money">30</span></p>
+            <!-- <p id="square28-owner"></p>
+            <p id="square28-residents"></p> -->
+        </div>
+        <div class="cell square" id="square27">
+            <p class="square27-name"class="square-name"><b>27</b></p>
+            <p>XP = <span id="square27-xp">30</span><br>
+             Happy = <span id="square27-happy">20</span><br>
+             Money = <span id="square27-money">35</span></p>
+            <!-- <p id="square27-owner"></p>
+            <p id="square27-residents"></p> -->
+        </div>
+        <div class="cell square" id="square26">
+            <p class="square26-name"class="square-name"><b>26</b></p>
+            <p>XP = <span id="square26-xp">25</span><br>
+             Happy = <span id="square26-happy">20</span><br>
+             Money = <span id="square26-money">30</span></p>
+            <!-- <p id="square26-owner"></p>
+            <p id="square26-residents"></p> -->
+        </div>
+        <div class="cell square" id="square25">
+            <p class="square25-name"class="square-name"><b>&larr;	25</b></p>
+            <p>XP = <span id="square25-xp">15</span><br>
+             Happy = <span id="square25-happy">25</span><br>
+             Money = <span id="square25-money">30</span></p>
+            <!-- <p id="square25-owner"></p>
+            <p id="square25-residents"></p> -->
+        </div>
+        <div class="cell info" style="width:20%;">
+            <p>Message!</p>
+          <p id="infotext">infotext</p>
+          <button id="btnyes">Accept</button> <button id="btnno">Reject</button>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="cell square" id="square33">
+            <p class="square33-name"class="square-name"><b>33 &rarr;</b></p>
+            <p>XP = <span id="square33-xp">1</span><br>
+             Happy = <span id="square33-happy">5</span><br>
+             Money = <span id="square33-money">-1</span></p>
+            <!-- <p id="square33-owner"></p>
+            <p id="square33-residents"></p> -->
+        </div>
+        <div class="cell square" id="square34">
+            <p class="square34-name"class="square-name"><b>34</b></p>
+            <p>XP = <span id="square34-xp">15</span><br>
+             Happy = <span id="square34-happy">4</span><br>
+             Money = <span id="square34-money">3</span></p>
+            <!-- <p id="square34-owner"></p>
+            <p id="square34-residents"></p> -->
+          </div>
+        <div class="cell square" id="square35">
+            <p class="square35-name"class="square-name"><b>35</b></p>
+            <p>XP = <span id="square35-xp">-3</span><br>
+             Happy = <span id="square35-happy">10</span><br>
+             Money = <span id="square35-money">-2</span></p>
+            <!-- <p id="square35-owner"></p>
+            <p id="square35-residents"></p> -->
+        </div>
+        <div class="cell square" id="square36">
+            <p class="square36-name"class="square-name"><b>36</b></p>
+            <p>XP = <span id="square36-xp">-2</span><br>
+             Happy = <span id="square36-happy">15</span><br>
+             Money = <span id="square36-money">-6</span></p>
+            <!-- <p id="square36-owner"></p>
+            <p id="square36-residents"></p> -->
+        </div>
+        <div class="cell square" id="square37">
+            <p class="square37-name"class="square-name"><b>37</b></p>
+            <p>XP = <span id="square37-xp">15</span><br>
+             Happy = <span id="square37-happy">15</span><br>
+             Money = <span id="square37-money">20</span></p>
+            <!-- <p id="square37-owner"></p>
+            <p id="square37-residents"></p> -->
+        </div>
+        <div class="cell square" id="square38">
+            <p class="square38-name"class="square-name"><b>38</b></p>
+            <p>XP = <span id="square38-xp">15</span><br>
+             Happy = <span id="square38-happy">20</span><br>
+             Money = <span id="square38-money">-5</span></p>
+            <!-- <p id="square38-owner"></p>
+            <p id="square38-residents"></p> -->
+        </div>
+        <div class="cell square" id="square39">
+            <p class="square39-name"class="square-name"><b>39</b></p>
+            <p>XP = <span id="square39-xp">-4</span><br>
+             Happy = <span id="square39-happy">8</span><br>
+             Money = <span id="square39-money">-6</span></p>
+            <!-- <p id="square39-owner"></p>
+            <p id="square39-residents"></p> -->
+        </div>
+        <div class="cell square" id="square40">
+            <p class="square40-name"class="square-name"><b>40 &darr;</b></p>
+            <p>XP = <span id="square40-xp">0</span><br>
+             Happy = <span id="square40-happy">0</span><br>
+             Money = <span id="square40-money">0</span></p>
+            <!-- <p id="square40-owner"></p>
+            <p id="square40-residents"></p> -->
+          </div>
+          <div class="cell info" style="width:20%;">
+ 
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell square" id="square48">
+            <p class="square48-name"class="square-name"><b>48</b></p>
+            <p>XP = <span id="square48-xp">40</span><br>
+             Happy = <span id="square48-happy">40</span><br>
+             Money = <span id="square48-money">40</span></p>
+            <!-- <p id="square48-owner"></p>
+            <p id="square48-residents"></p> -->
+        </div>
+        <div class="cell square" id="square47">
+            <p class="square47-name"class="square-name"><b>47</b></p>
+            <p>XP = <span id="square47-xp">20</span><br>
+             Happy = <span id="square47-happy">20</span><br>
+             Money = <span id="square47-money">30</span></p>
+            <!-- <p id="square47-owner"></p>
+            <p id="square47-residents"></p> -->
+        </div>
+        <div class="cell square" id="square46">
+            <p class="square46-name"class="square-name"><b>46</b></p>
+            <p>XP = <span id="square46-xp">20</span><br>
+             Happy = <span id="square46-happy">20</span><br>
+             Money = <span id="square46-money">20</span></p>
+            <!-- <p id="square46-owner"></p>
+            <p id="square46-residents"></p> -->
+        </div>
+        <div class="cell square" id="square45">
+            <p class="square45-name"class="square-name"><b>45</b></p>
+            <p>XP = <span id="square45-xp">20</span><br>
+             Happy = <span id="square45-happy">20</span><br>
+             Money = <span id="square45-money">20</span></p>
+            <!-- <p id="square45-owner"></p>
+            <p id="square45-residents"></p> -->
+        </div>
+        <div class="cell square" id="square44">
+            <p class="square44-name"class="square-name"><b>44</b></p>
+            <p>XP = <span id="square44-xp">5</span><br>
+             Happy = <span id="square44-happy">30</span><br>
+             Money = <span id="square44-money">25</span></p>
+            <!-- <p id="square44-owner"></p>
+            <p id="square44-residents"></p> -->
+        </div>
+        <div class="cell square" id="square43">
+            <p class="square43-name"class="square-name"><b>43</b></p>
+            <p>XP = <span id="square43-xp">12</span><br>
+             Happy = <span id="square43-happy">20</span><br>
+             Money = <span id="square43-money">40</span></p>
+            <!-- <p id="square43-owner"></p>
+            <p id="square43-residents"></p> -->
+        </div>
+        <div class="cell square" id="square42">
+            <p class="square42-name"class="square-name"><b>42</b></p>
+            <p>XP = <span id="square42-xp">20</span><br>
+             Happy = <span id="square42-happy">30</span><br>
+             Money = <span id="square42-money">20</span></p>
+            <!-- <p id="square42-owner"></p>
+            <p id="square42-residents"></p> -->
+        </div>
+        <div class="cell square" id="square41">
+            <p class="square41-name"class="square-name"><b>&larr; 41</b></p>
+            <p>XP = <span id="square41-xp">20</span><br>
+             Happy = <span id="square41-happy">30</span><br>
+             Money = <span id="square41-money">20</span></p>
+            <!-- <p id="square41-owner"></p>
+            <p id="square41-residents"></p> -->
+        </div>
+        <div class="cell info" style="width:20%;">
+            <p></p>
+        </div>
+        <div class="cell info" style="width:20%; background-color: white;">
+            <!-- <p>Please show</p> -->
+        </div>
+    </div>
+  </section>
+    
+          <!-- modal -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="modalcontent">Some text in the Modal..</p>
+            </div>
+          </div>
+     <!--  modal over
+ -->
+    </body>
+</html>
